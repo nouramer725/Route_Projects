@@ -2,22 +2,22 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class MarketRates extends StatelessWidget {
-  String selectedtext1;
-  String selectedtext2;
-  String selectedtext3;
+  String selectedText1;
+  String selectedText2;
+  String selectedText3;
   String value;
   final IconData icon;
   final Color iconColor;
-  final int backgroundColorvalue;
+  final int backgroundColorValue;
 
   MarketRates({
     required this.value,
-    this.selectedtext3 = "",
+    this.selectedText3 = "",
     required this.icon,
     required this.iconColor,
-    this.backgroundColorvalue = 0xFFFFFFFF,
-    required this.selectedtext2,
-    required this.selectedtext1,
+    this.backgroundColorValue = 0xFFFFFFFF,
+    required this.selectedText2,
+    required this.selectedText1,
     super.key,
   });
 
@@ -34,34 +34,36 @@ class MarketRates extends StatelessWidget {
           IconButton(
             style: ButtonStyle(
               backgroundColor: WidgetStatePropertyAll(
-                Color(backgroundColorvalue),
+                Color(backgroundColorValue),
               ),
             ),
             onPressed: () {},
             icon: Icon(icon, color: iconColor),
           ),
-          Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              SelectableText(
-                selectedtext1,
-                style: GoogleFonts.inter(
-                  fontWeight: FontWeight.w500,
-                  fontSize: 16,
-                  color: Color(0xFF121212),
-                  letterSpacing: -0.31,
+          Expanded(
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                SelectableText(
+                  selectedText1,
+                  style: GoogleFonts.inter(
+                    fontWeight: FontWeight.w500,
+                    fontSize: 15,
+                    color: Color(0xFF121212),
+                    letterSpacing: -0.31,
+                  ),
                 ),
-              ),
-              SelectableText(
-                selectedtext2,
-                style: GoogleFonts.inter(
-                  fontWeight: FontWeight.w500,
-                  fontSize: 14,
-                  color: Color(0xFFA1A1A1),
-                  letterSpacing: -0.15,
+                SelectableText(
+                  selectedText2,
+                  style: GoogleFonts.inter(
+                    fontWeight: FontWeight.w500,
+                    fontSize: 14,
+                    color: Color(0xFFA1A1A1),
+                    letterSpacing: -0.15,
+                  ),
                 ),
-              ),
-            ],
+              ],
+            ),
           ),
           Spacer(),
           Column(
@@ -71,13 +73,13 @@ class MarketRates extends StatelessWidget {
                 value,
                 style: GoogleFonts.inter(
                   fontWeight: FontWeight.w800,
-                  fontSize: 16,
+                  fontSize: 14,
                   color: Color(0xFF121212),
                   letterSpacing: -0.31,
                 ),
               ),
               SelectableText(
-                selectedtext3,
+                selectedText3,
                 style: GoogleFonts.inter(
                   fontWeight: FontWeight.w500,
                   fontSize: 14,

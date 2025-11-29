@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:hotel/Wisepay/home_screen.dart';
+import 'package:hotel/Food/home_screen.dart';
 
 void main() {
   runApp(const MyApp());

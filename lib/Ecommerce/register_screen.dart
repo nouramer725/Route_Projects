@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:hotel/Ecommerce/forgetpassword_screen.dart';
 import 'package:hotel/Ecommerce/login_Screen.dart';
-import 'package:hotel/Ecommerce/get_started.dart';
 import 'components.dart';
 
 class RegisterScreen extends StatelessWidget {
@@ -10,13 +10,14 @@ class RegisterScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.white,
       body: Padding(
         padding: const EdgeInsets.all(16),
         child: SafeArea(
           child: SingleChildScrollView(
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
-              spacing: 34,
+              spacing: 31,
               children: [
                 Text(
                   "Create an\nAccount!",
@@ -52,7 +53,7 @@ class RegisterScreen extends StatelessWidget {
                   onPressed: () {
                     Navigator.push(
                       context,
-                      MaterialPageRoute(builder: (context) => GetStarted()),
+                      MaterialPageRoute(builder: (context) => ForgetPasswordScreen()),
                     );
                   },
                 ),
